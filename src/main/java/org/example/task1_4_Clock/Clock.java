@@ -1,6 +1,6 @@
 package org.example.task1_4_Clock;
 
-public class Clock {
+public class Clock implements Readable {
     private int hours;
     private int minutes;
     private int seconds;
@@ -38,7 +38,13 @@ public class Clock {
         } else {
             this.setSeconds(this.seconds + 1);
         }
-        System.out.println(this.getHours() + ":" + this.getMinutes() + ":" +  this.getSeconds());
+
 
     }
+
+    @Override
+    public void readTime() {
+        System.out.println(this.getHours() + ":" + this.getMinutes() + ":" +  this.getSeconds());
+    };
+
 }
